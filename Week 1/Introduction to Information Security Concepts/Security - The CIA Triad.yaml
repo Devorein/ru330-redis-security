@@ -1,4 +1,39 @@
 subject: Redis Security
 topic: The CIA Triad
 questions:
-  - 
+  - question: What does the CIA in "CIA Triad" stands for ?
+    answers: 0
+    options:
+      - Confidentiality, Integrity, and Availability
+      - Cardinality, Integrity, and Atomicity
+      - Consistency, Isolation, and Atomicity
+      - Comprehension, Interoperability, and Accuracy
+  - question: What is the property that information is not made available or disclosed to unauthorized individuals, entities or processes ?
+    answers: 0
+    options:
+      - Confidentiality
+      - Consistency
+      - Authority
+      - Availability
+  - question: Which property is maintained when an letter is sealed in an envelope ?
+    answers:
+      - text: 0
+        explanation: The letter is confidential since its been sealed in an envelope and thus only the person who have the stamp can read its content
+    options:
+      - Confidentiality
+      - Integrity
+      - Availability
+  - question: Which property ensures that the data is not modified during transit ?
+    answers: 0
+    options:
+      - Integrity
+      - Confidentiality
+      - Consistency
+      - Availability
+  - question: Which property ensures that the services required for a complete transaction is accessible ?
+    answers: 0
+    options:
+      - Availability
+      - Integrity
+      - Confidentiality
+      - Consistency
