@@ -1,0 +1,45 @@
+subject: Redis Security
+topic: Risk Assessment
+questions:
+  - question: Is it always practical to secure against every conceivable attacks ?
+    answers:
+      text: 0
+      explanation: Security is not always about securing "all the things.". Rather, security is about making informed risk management decisions.
+    options:
+      - Yes
+      - No
+  - question: Which of the following are steps of the risk assessment model ?
+    option:
+      - Establish context
+      - Analyze the situation
+      - Evaluate the risk
+      - Risk Decision
+      - Monitor & Review
+      - Contain and Control
+      - Compare against known issues
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+  - question: Which step is an assessment of the impact the identified risk would have on a business if the risk were exploited
+    answers: 0
+    options:
+      - Analyze the situation
+      - Evaluate the risk
+      - Risk Decision
+      - Monitor & Review
+  - question: Which of the following steps can be done after a risk has been identified ?
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - Accepting
+      - Mitigating
+      - Transferring
+      - Avoiding
+      - Blaming
+      - Deferring
