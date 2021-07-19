@@ -1,0 +1,80 @@
+subject: Redis Security
+topic: Defense in Depth
+questions:
+  - question: Is data security deployed in layers ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: What is the first layer of the data security ?
+    answers:
+      text: Firewall
+      modifiers:
+        - IC
+  - question: What is the second layer of data security ?
+    answers: 0
+    options:
+      - Application level
+      - Database
+      - Firewall
+  - question: What is the last layer of data security ?
+    answers: 0
+    options:
+      - Database
+      - Application level
+      - Firewall
+  - question: Which of the following is the first step towards database hardening ?
+    answers: 0
+    options:
+      - Using latest version
+      - Using lts version
+      - Using open source version
+  - question: What is the second step towards database hardening ?
+    answers: 0
+    options:
+      - Authentication and authorization
+      - Using latest version of the database
+      - Encrypting the data
+  - question: Which version of redis started supporting access control lists ?
+    answers: 6
+  - question: Redis role-based access control is available in which redis ?
+    answers: 0
+    options:
+      - Redis Enterprise 6
+      - Redis 6
+      - Redis Enterprise 5
+      - Redis 5
+  - question: Which of the following is the last step towards database hardening ?
+    answers: 0
+    options:
+      - Encrypting the data
+      - Authentication and authorization
+      - Using latest version of the database
+  - question: What does DLP stands for ?
+    answers: 0
+    options:
+      - Data loss prevention
+      - Database layer protection
+      - Data layer protection
+  - question: Does redis support basic authentication model ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: In basic authentication model which of the following provides full access ?
+    answers: 0
+    options:
+      - password
+      - Token
+      - both
+  - question: Which of the following ensures data and database encryption ?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Client side encryption
+      - Disk encryption
+      - TLS encryption
+      - Password encryption
+      - Token encryption
