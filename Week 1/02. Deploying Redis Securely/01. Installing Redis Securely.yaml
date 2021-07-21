@@ -1,0 +1,42 @@
+topic: Installing Redis Securely
+subject: Redis Security
+questions:
+  - question:
+      - Always run
+      - as a dedicated
+      - user
+    answers:
+      - redis
+      - non-privileged
+  - question: Should you run redis as a sudo or a root ?
+    answers: 0
+    options:
+      - No
+      - Yes
+  - question: Always restrict access to which of the following ?
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - Logs
+      - Configs
+      - Data Files
+      - Installation path
+  - question: Which of the following are open ssl libraries that tls requires ?
+    answers:
+      - 0
+      - 1
+    options:
+      - tcl-tls
+      - libssl-dev
+      - ssl-dev
+      - tls
+  - question: Write the command to add a new user and group called `redis-npu` for the system
+    answers: sudo adduser --system --group redis-npu
+  - question: Add `rnpu` user as the owner of the directory `redis`
+    answers: sudo chown rnpu:rnpu /redis
+  - question: Write the command to restrict the permission of the `redis` directory so that only redis can access it
+    answers: sudo chmod 770 /redis
+  - question
