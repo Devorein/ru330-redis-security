@@ -44,16 +44,29 @@ questions:
       - Yes
       - No
   - question: What does protected mode enable in redis ?
-    answers: 0
+    answers:
+      - 0
+      - 1
     options:
-      - Redis only communicate with the clients located in the same server
-      - Redis only communicate with the clients located in the same network
-      - Redis only communicate with the clients located in any server
-      - Redis only communicate with the clients located in any network
+      - Redis will only reply to clients located on the same server that Redis is running on.
+      - It prevents new Redis deployments from being exposed externally.
+      - It prevents data from being synchronized to disk storage.
+      - Protected-mode prevents the redis.conf file from being edited to ensure a safe deployment configuration.
   - question: Which directive is used to change the protected mode settings ?
     answers: protected-mode
   - question: Which directive is used to change which ip addresses redis listens to?
     answers: bind
+  - question: The default Redis configuration binds a Redis server exclusively to a local network interface. What connectivity limitations does this configuration enforce?
+    answers:
+      - text: 0
+        explanation: The redis.conf file also comes with a default directive to bind exclusively to the local network interface. This means that Redis will only listen to connections coming to this specific IP address, which is by default the local loopback interface.
+      - text: 1
+        explanation: To have Redis listen on all network interfaces, just comment out this bind directive. Or, if you want to bind to a specific interface, provide that interface's IP address to the bind directive.
+    options:
+      - Redis will only listen on the local loopback interface.
+      - Redis will only listen for and accept connections sent to the specified network interface.
+      - Redis requires registration of a specific IP address using the built in user-interface console at local:redis.
+      - Redis needs an external IP address to bind to in order to accept incoming connections.
   - question: When should protected mode be disabled ?
     answers:
       - 0

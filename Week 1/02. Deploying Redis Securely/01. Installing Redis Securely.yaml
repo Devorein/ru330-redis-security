@@ -7,6 +7,13 @@ questions:
       - non-privileged
       - root
       - any user
+  - question: The user-account that runs the Redis server should have which of the following properties in order to maximize security?
+    answers: 0
+    options:
+      - dedicated, non-privileged.
+      - dedicated, privileged.
+      - non-dedicated, privileged.
+      - non-dedicated, non-privileged.
   - question: Should you run redis as a sudo or a root ?
     answers: 0
     options:
