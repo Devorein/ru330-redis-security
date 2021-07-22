@@ -1,0 +1,46 @@
+topic: Securing Redis Client Code
+subject: Redis Security
+questions:
+  - question: Is redis subjected to sql injection ?
+    answers:
+      text: 0
+      explanation: Since redis doesn't use a query language its not subject to sql injection
+    options:
+      - No
+      - Yes
+  - question: Which of the following scenario requires client side code security ?
+    answers:
+      - 0
+      - 1
+    options:
+      - Validate input used to generate redis keys
+      - Validate input passed to lua scripts
+      - Validate input used a redis values
+  - question: Does redis embed the lua interpreter ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: Should lua scripts be constructed from user input ?
+    answers: 0
+    options:
+      - No
+      - Yes
+  - question: What sort of validation should be placed for user inputs?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Client side
+      - Server side
+      - Database side
+  - question: When using Lua scripts to perform complex tasks with Redis, which of the following are important security considerations?
+    answers:
+      - 0
+      - 1
+    options:
+      - Lua scripts shouldn't be uploaded and executed by a user.
+      - Lua scripts should never be dynamically generated based on user input.
+      - Lua scripts should rarely, if ever, be used.
+      - Lua scripts shouldn't have access to external APIs.
