@@ -1,0 +1,47 @@
+subject: Redis Security
+topic: Basic Authentication
+questions:
+  - question: Which version of redis introduced users ?
+    answers: 6
+  - question: Before which version of redis everything could've been accessed using a single global password ?
+    answers: 6
+  - question: Which directive is used to setup the global password in redis ?
+    answers: requirepass
+  - question: |
+      Run the `redis-server`
+
+      1. As a daemon
+      2. Using `redis.conf` located in the same directory
+
+    answers: redis-server /redis.conf &
+  - question: Which message is sent to the redis client if authentication is not set ?
+    answers: 0
+    options:
+      - NOAUTH
+      - AUTHERROR
+      - AUTHFAIL
+  - question: Which command is used to authenticate a redis client ?
+    answers: auth
+  - question: Does redis 6 keep support for single global password ?
+    answers:
+      text: 0
+      explanation: Yes its kept for backward compatibility
+    options:
+      - Yes
+      - No
+  - question: What is the name of the default user in redis ?
+    answers: default
+  - question: Does the default user have a password from the start ?
+    answers: 0
+    options:
+      - No
+      - Yes
+  - question: Create a password `pass` for the `default` user and give it access to all keys and all commands
+    answers: user default on >pass allcommands allkeys
+  - question: Authenticate with the `default` user by providing the password `pass`
+    answers: auth default pass
+  - question: Should plain text password be stored in the .conf file ?
+    answers: 0
+    options:
+      - No
+      - Yes
