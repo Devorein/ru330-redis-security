@@ -1,0 +1,72 @@
+subject: Redis Security
+topic: Basic Redis Security
+questions:
+  - question:
+      - In computing, a
+      - is a network
+      - system that monitors and controls
+      - and outgoing
+      - traffic based on predetermined
+      - rules
+    answers:
+      - firewall
+      - security
+      - incoming
+      - network
+      - security
+  - question: Should redis be run open to the public internet ?
+    answers: 0
+    options:
+      - No
+      - Yes
+  - question: Should redis be always behind a firewall ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: Where should database be deployed and accessed from ?
+    answers: 0
+    options:
+      - Private network and private ip addresses
+      - Private network and public ip addresses
+      - Public network and private ip addresses
+      - Public network and public ip addresses
+  - question: If redis is deployed in a cloud where is it deployed ?
+    answers: 0
+    options:
+      - VPS
+      - VPC
+      - VPN
+      - VPM
+  - question: Does redis start in protected mode from the default configuration ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: What does protected mode enable in redis ?
+    answers: 0
+    options:
+      - Redis only communicate with the clients located in the same server
+      - Redis only communicate with the clients located in the same network
+      - Redis only communicate with the clients located in any server
+      - Redis only communicate with the clients located in any network
+  - question: Which directive is used to change the protected mode settings ?
+    answers: protected-mode
+  - question: Which directive is used to change which ip addresses redis listens to?
+    answers: bind
+  - question: When should protected mode be disabled ?
+    answers:
+      - 0
+      - 1
+    options:
+      - After authentication has been enabled
+      - When the server is secured
+      - All times
+      - In development environment
+  - question: When would it be appropriate for a production deployment of Redis to be open to the public internet?
+    answers: 0
+    options:
+      - Under no circumstances.
+      - When receiving upload data as user input.
+      - When utilizing software-as-a-service not hosted locally.
+      - When using Redis as a volatile cache-only data store.
