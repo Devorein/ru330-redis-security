@@ -1,0 +1,105 @@
+topic: Disaster Recovery and Availability
+subject: Redis Security
+questions:
+  - question: Which of the following are the steps in the event of a failure ?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Backups
+      - Replication
+      - Persistence
+      - Sharding
+      - Horizontal scaling
+  - question: Which of the following step does ensure that data in redis will survive a reboot or restart process ?
+    answers: 0
+    options:
+      - Persistence
+      - Backups
+      - Replication
+      - Sharding
+      - Horizontal scaling
+  - question: Which of the following step ensures the movement of data from one instance of redis to another to facilitate high availability?
+    answers: 0
+      - Replication
+      - Persistence
+      - Backups
+      - Sharding
+      - Horizontal scaling
+  - question: Which of the following step creates a cold copy of the data and store in a remote location ?
+    answers: 0
+    option:
+      - Backups
+      - Replication
+      - Persistence
+      - Sharding
+      - Horizontal scaling
+  - question: Which of the following files does redis uses for persistance ?
+    answers:
+      - 0
+      - 1
+    options:
+      - Rdb files
+      - Append only files
+      - Prepend only files
+      - Read only files
+      - Rsdb files
+  - question: Which of the following file provide point in time snapshots of the data stored within redis ?
+    answers: 0
+    options:
+      - Rdb file
+      - AOF file
+  - question: Which of the following file provide a lot more durable form of persistance ?
+    answers: 0
+    options:
+      - AOF file
+      - Rdb file
+  - question: Replication can only be possible in a redis cluster ?
+    answers: 0
+    options:
+      - Yes
+      - No
+  - question: If one node/shard fails in a replica cluster which of the following data recovering mechanism will help ?
+    answers: 0
+    options:
+      - Replication
+      - Backups
+      - Persistence
+      - Sharding
+      - Horizontal scaling
+  - question: Which of the following should be enabled for higher availability in a redis cluster ?
+    answers:
+      - 0
+      - 1
+    options:
+      - Cluster mode
+      - Sentinel mode
+      - Shard mode
+      - Scale mode
+  - question: Which of the following features does the sentinel mode introduces ?
+    options:
+      - failure monitoring
+      - failure notifications
+      - automated failover
+      - automated backups
+      - failure messaging
+    answers:
+      - 0
+      - 1
+      - 2
+  - question: Which of the following mode results in a cluster partitioning from a redis failure ?
+    answers: 0
+    options:
+      - Cluster mode
+      - Sentinel mode
+      - Shard mode
+      - Scale mode
+      - Partition mode
+  - question: Replication using a Redis cluster is considered a good recovery strategy. Why is this the case?
+    answers: 0
+    options:
+      - It allows for failover from one node to another in the event of failure.
+      - Replication assures a log of previous data states among nodes.
+      - It is impossible for clusters to become out of sync, so recovery is assured.
+      - Loss is minimized by only losing a portion of data from a node within a cluster.
