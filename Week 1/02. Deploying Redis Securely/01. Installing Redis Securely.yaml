@@ -1,13 +1,12 @@
 topic: Installing Redis Securely
 subject: Redis Security
 questions:
-  - question:
-      - Always run
-      - as a dedicated
-      - user
-    answers:
-      - redis
+  - question: Always run redis as a dedicated what type of user ?
+    answers: 0
+    options:
       - non-privileged
+      - root
+      - any user
   - question: Should you run redis as a sudo or a root ?
     answers: 0
     options:
@@ -33,10 +32,50 @@ questions:
       - libssl-dev
       - ssl-dev
       - tls
-  - question: Write the command to add a new user and group called `redis-npu` for the system
-    answers: sudo adduser --system --group redis-npu
-  - question: Add `rnpu` user as the owner of the directory `redis`
+  - question: Write the command to add a new user and group called `r` for the system
+    answers: sudo adduser --system --group r
+  - question: Add `rnpu` user as the owner of the directory `/redis`
     answers: sudo chown rnpu:rnpu /redis
-  - question: Write the command to restrict the permission of the `redis` directory so that only redis can access it
+  - question: Write the command to restrict the permission so that only the group and owner can r/w/x the directory `/redis`
     answers: sudo chmod 770 /redis
-  - question
+  - question: Which of the following should be given access to the redis log and config files ?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Redis user
+      - Root user
+      - User added to the redis group
+      - All user
+  - question: Which chown code is used to indicate that only users belonging to the group and the owner can r/w a file ?
+    answers: 660
+  - question: Which chown code is used to indicate that only users belonging to the group can read a file, but not write, while the owner can r/w ?
+    answers: 640
+  - question: Which command is used to check the sha256 hash of a tarball file ?
+    answers: sha256sum
+  - question: |
+      Run redis with the following configurations
+
+      1. as user `r`
+      2. with `redis-server` located at `/bin/rs`
+      3. with config file located at `/etc/rs`
+      4. As a daemon
+    answers: sudo runuser -u r /bin/rs /etc/rs &
+  - question: Check the shasum of the `rs.tar.gz` file
+    answers: sha256sum rs.tar.gz
+  - question: Redis should be run as a non-privileged user. What is a non-privileged user?
+    answers:
+      - 0
+    options:
+      - A non-root user without sudo privileges.
+      - Any user.
+      - A temporary user that is created and deleted for every Redis server instance.
+      - A user in which all actions must be approved by an admin-level user.
+  - question: How can you verify the integrity of the Redis tarballs you install?
+    answers: 0
+    options:
+      - Compare the downloaded tarball SHA-256 hash with the SHA-256 hash listed on the Redis github repo.
+      - Directly download the tarballs from the Redis repository.
+      - Compare the file size of the downloaded Redis binaries to ones you compile locally.
+      - Use a trusted copy of an older Redis instance.
