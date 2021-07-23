@@ -1,0 +1,51 @@
+topic: ACL Concepts
+subject: Redis Security
+questions:
+  - question: Was there a support for per user permission pre redis 6
+    options:
+      - Yes
+      - No
+    answers:
+      - 1
+  - question: Was there a support for multiple users pre redis 6
+    options:
+      - Yes
+      - No
+    answers:
+      - 1
+  - question: Which version of redis introduced authorization?
+    answers:
+      - 6
+  - question: Which of the following permissions would a redis developer need?
+    answers:
+      - 0
+      - 1
+    options:
+      - read
+      - write
+      - configure
+  - question: Which of the following permission would a redis administrator need?
+    answers:
+      - 0
+    options:
+      - configure
+      - read
+      - write
+  - question: The publisher in a pub/sub system only need which permission?
+    answers:
+      - 0
+    options:
+      - Write
+      - Read
+  - question: The subscriber in a pub/sub system only need which permission?
+    answers:
+      - 0
+    options:
+      - Read
+      - Write
+  - question: Is it possible to restrict access to keys based on its name?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0

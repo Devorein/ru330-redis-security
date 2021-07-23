@@ -17,4 +17,13 @@ questions:
       - program
       - user
       - system
+  - question: Which best describes the concept of least privilege?
+    answers:
+      - 0
+    options:
+      - Entities within an organization should only have the level of access they need to accomplish their tasks.
+      - Only users who need to access Redis are authorized to access the database.
+      - Employees should be granted access to systems and processes gradually.
+      - An application's data access should be throttled and monitored.
+  
   
