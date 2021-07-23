@@ -1,0 +1,40 @@
+subject: Redis Security
+topic: Administering Redis ACLs
+questions:
+  - question: Should the password be stored in plain text when storing acl roles in a file
+    options:
+      - Yes
+      - No
+    answers:
+      - 1
+  - question: Does redis provide a way to setup acl using a config file
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Write the command to get the shasum256 for the string `a`
+    answers:
+      - echo -n "a" | shasum -a 256
+  - question: Which command is used to emit the redis users to a file?
+    answers:
+      - acl save
+  - question: Which command is used to load an acl file onto a redis server?
+    answers:
+      - acl load
+  - question: Which command is used to check the current redis user
+    answers:
+      - acl whoami
+  - question: Write the command to delete the `a` user
+    answers:
+      - acl deluser a
+  - question: Why should an ACL configuration file be used?
+    answers:
+      - 0
+    options:
+      - To manage large lists with complex permission sets.
+      - To manage just a few users with similar permissions.
+      - To have backwards-compatibility with Redis 5.0.
+      - To skip using the redis.conf file.
+  
+  
