@@ -1,0 +1,47 @@
+subject: Redis Security
+topic: Practical ACLs with Redis
+questions:
+  - question: |
+      Write the command to create an admin user
+      1. named `a`
+      2. With password `p`
+    answers:
+      - acl setuser a on >p +@admin
+  - question: Run the redis command to disable the default user
+    answers:
+      - acl setuser default off
+  - question: Which flag is used to give a redis user access to all commands?
+    answers:
+      - allcommands
+  - question: Which flag is used to denote the dangerous commands?
+    answers:
+      - "@dangerous"
+  - question: Which flag is used to give a redis user access to all keys in the database?
+    answers:
+      - allkeys
+  - question: Write the command to get all the commands listed as `dangerous`
+    answers:
+      - acl cat dangerous
+  - question: Write the command to get a list of all the categories
+    answers:
+      - acl cat
+  - question: |
+      Write the command to create an user
+      1. named `a`
+      2. With password `p`
+      3. Can use only `set` and `get` commands
+      4. Restrict the user to access only keys starting with `dev:`
+    answers: acl setuser a on >p +set +get ~dev:*
+  - question: Write the command to get a list of all the users
+    answers:
+      - acl list
+  - question: Why would we disable the default Redis user in Redis 6.0?
+    answers:
+      - 0
+      - 1
+    options:
+      - Because the default user has full permissions.
+      - Because the default user exists in every initial Redis deployment.
+      - Because the default user cannot run certain config commands.
+      - Because disabling the default user allows remote server management.
+  

@@ -49,3 +49,13 @@ questions:
       - No
     answers:
       - 0
+  - question: What features does the ACL (Access Control List) introduce to Redis 6.0?
+    answers:
+      - 0
+      - 1
+    options:
+      - Multiple Redis Users
+      - Per-user permissions control
+      - IP address binding
+      - Data-store replication
+  
