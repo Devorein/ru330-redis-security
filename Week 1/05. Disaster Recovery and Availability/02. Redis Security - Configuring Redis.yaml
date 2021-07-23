@@ -1,0 +1,182 @@
+subject: Redis Security
+topic: Configuring Redis
+questions:
+  - question: How many types of saves are there in redis ?
+    answers: 2
+  - question: Which of the following types of saves does redis provides ?
+    answers:
+      - 0
+      - 1
+    options:
+      - BGSAVE
+      - SAVE
+      - COMMIT
+      - PRESAVE
+      - POSTSAVE
+  - question: Which command can be executed in the background and does not disrupt the processing of data within redis?
+    answers:
+      - 0
+    options:
+      - BGSAVE
+      - SAVE
+      - COMMIT
+      - PRESAVE
+  - question: Which of the following command will block any other commands from executing within redis ?
+    answers:
+      - 0
+    options:
+      - SAVE
+      - BGSAVE
+      - COMMIT
+  - question: Which save command is the default within redis configuration ?
+    answers:
+      - 0
+    options:
+      - BGSAVE
+      - SAVE
+  - question:
+      - 
+      - policies are defined by the number of
+      - that occur within a given timeframe
+    answers:
+      - save
+      - changes
+  - question: Does Redis provide save policies
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: If the save policy threshold is met what will redis do?
+    answers:
+      - 0
+    options:
+      - Perform background backup
+      - Perform blocking backup
+      - Close the instance and backup
+  - question: What is the name of the redis configuration file ?
+    answers:
+      - redis.conf
+  - question: Which command is used to dynamically configure the redis configuration file?
+    answers:
+      - config
+  - question: Write the command to set the data filename to `db.rdb`
+    answers:
+      - config set dbfilename db.rdb
+  - question: Write the command to set the data directory to `/a`
+    answers:
+      - config set dir /a
+  - question: |
+        Write the save policy to save the data if
+        
+        1. `10` keys are changed every `300` seconds
+        2. `5` keys are changed every `150` seconds
+    answers:
+      - 300 10 150 5
+  - question: |
+        Write the command to set the save policy to save the data if
+        
+        1. `10` keys are changed every `300` seconds
+        2. `5` keys are changed every `150` seconds
+    answers:
+      - config set save "300 10 150 5"
+  - question: Which function is responsible for writing data from memory to disk within redis?
+    answers:
+      - fsync
+  - question: How many `fsync` policies does redis provide?
+    answers:
+      - 3
+  - question: Which of the following are `fsync` policies provided by redis?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - always
+      - everysec
+      - no
+      - yes
+      - every
+  - question: Which `fsync` policy makes redis wait for the write and the `fsync` to complete prior to sending an acknowledgement to the client that the data has been written
+    answers:
+      - always
+  - question: Which `fsync` policy should be considered where there is a high cost for data loss?
+    answers:
+      - always
+  - question: Which `fsync` policy favors durability over performance
+    answers:
+      - always
+  - question: Redis writes new data to disk every second due to which `fsync` policy?
+    answers:
+      - everysec
+  - question: Which `fsync` policy balances durability and performance?
+    answers:
+      - everysec
+  - question: Which is the default `fsync` policy for redis?
+    answers:
+      - everysec
+  - question: Which `fsync` policy favors performance over durability?
+    answers:
+      - no
+  - question: Which `fsync` policy should be set if the cost of additional data loss is minimal
+    answers:
+      - no
+  - question: Which `fsync` policy should not be used when using pipelining writes?
+    answers:
+      - always
+  - question: Write the command to turn on `appendonly` mode
+    answers:
+      - config set appendonly yes
+  - question: Is `appendonly` directive disabled by default
+    options:
+      - No
+      - Yes
+    answers:
+      - 1
+  - question: Set the `fsync` policy to `no`
+    answers:
+      - config set appendfsync no
+  - question: Set the rewrite policy so that the file will be rewritten when its 100% larger during the previous rewrite
+    answers:
+      - config set auto-aof-rewrite-percentage 100
+  - question:
+      - A
+      - is achieved by reading data in
+      - to create a new
+      - so that the shortest
+      - file is able to be always used
+    answers:
+      - rewrite
+      - memory
+      - file
+      - aof
+  - question: Set the minimum size for the rewrite to `5mb`
+    answers:
+      - config set auto-aof-rewrite-min-size 5mb
+  - question: Does the recovery speed improve when using both rdb and aof files
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Where is the log rotation configuration file located?
+    answers:
+      - /etc/logrotate.conf
+  - question: What does log rotation ensure?
+    answers:
+      - 0
+      - 1
+    options:
+      - Disk space dont fill up in the os
+      - Keeps the logs small
+      - Keeps the logs fresh
+      - Faster recovery
+  - question: Active-Active geo replication with Redis Enterprise can help you achieve which of the following?
+    answers:
+      - 0
+    options:
+      - High availability across multiple geographic regions.
+      - GDPR compliance.
+      - A more effective backup strategy.
+      - Network segmentation.
+      - Read only replica architecture for scaling
