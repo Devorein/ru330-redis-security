@@ -1,0 +1,20 @@
+subject: Redis Security
+topic: Overview and Principle of Least Privilege
+questions:
+  - question: Which of the following redis feature allows us to implement the principle of least priviliege?
+    answers:
+      - 0
+    options:
+      - Access Control List
+      - Access Manage List
+      - Access Privilege List
+  - question:
+      - Every
+      - and every privileged
+      - of the
+      - should operate using the least amount of privilege necessary in order to complete the task
+    answers:
+      - program
+      - user
+      - system
+  
