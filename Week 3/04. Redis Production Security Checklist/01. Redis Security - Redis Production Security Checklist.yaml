@@ -1,0 +1,61 @@
+topic: Redis Production Security Checklist
+subject: Redis Security
+questions:
+  - question: Ensure redis is always deployed is which sort of network?
+    answers:
+      - - trusted
+        - private
+  - question: Which mode should be on unless ACLs or AUTH is enabled
+    answers:
+      - protected
+  - question: Should the log file always be configured before sending it to production?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Ensure redis is run as a which sort of user?
+    answers:
+      - non-privileged
+  - question: Ensure redis files are given to which sort of group?
+    answers:
+      - non-privileged
+  - question: Should log files be rotated?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question:
+      - ""
+      - and aof files should be backed up to a
+      - external
+      - .
+    answers:
+      - rdb
+      - remote
+      - server
+  - question: Where should redis log files be sent to?
+    answers:
+      - syslog
+  - question: Should an even number of redis nodes be deployed in a cluster?
+    options:
+      - Yes
+      - No
+    answers:
+      - 1
+  - question: What is the minimum recommended number of redis nodes to be deployed in a cluster?
+    answers:
+      - 3
+  - question: Which redis config directive is used for authentication to masters
+    answers:
+      - masteruser
+  - question: Should server ciphers be preferred over client ciphers?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Key files should be given which chmod permissions?
+    answers:
+      - 400
