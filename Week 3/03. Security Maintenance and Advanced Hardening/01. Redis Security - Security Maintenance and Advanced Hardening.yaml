@@ -1,0 +1,52 @@
+subject: Redis Security
+topic: Security Maintenance and Advanced Hardening
+questions:
+  - question: Which of the following steps are part of redis security maintenance
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Keeping redis server and client up-to date
+      - password management
+      - Account management
+      - Log management
+      - Duplication management
+  - question: Which of the following ways can be used to view the ACL users
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - "`acl list`"
+      - redis.conf
+      - external ACL file
+      - redis.log
+      - external redis log
+  - question: Which command can be used to view the current installed redis version?
+    answers:
+      - info
+  - question: Which `redis.conf` directives must be modified when the default port is changed
+    answers:
+      - 0
+      - 1
+    options:
+      - port
+      - tls-port
+      - ssl-port
+  - question: Why is it considered good practice not to run Redis on the default port 6379?
+    answers:
+      - 0
+    options:
+      - Changing the default port makes it harder for automated scripts to target Redis.
+      - Changing the default port makes Redis easier to use.
+      - Because attackers only ever target the Redis default port.
+      - It achieves security through obscurity.
+  - question: From a security perspective, why is it important to ensure you are on the latest version of your Redis client or server?
+    answers:
+      - 0
+    options:
+      - Security bugs are fixed in later versions as they are discovered.
+      - The latest version of Redis will always have the latest security features.
+      - The newest version of software is often considered the safest from attacks.
+      - You can take advantage of new features in Redis.
