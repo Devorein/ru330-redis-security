@@ -1,0 +1,95 @@
+subject: Redis Security
+topic: Authentication
+questions:
+  - question: Which of the following methods does TLS use to establish trust and identity?
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - asymmetric-key ciphers
+      - certificates
+      - certificate authorities
+      - digital signatures
+      - symmetric-key ciphers
+  - question: When first connecting with a bank how does it present its public key?
+    answers:
+      - 0
+    options:
+      - In the form of a certificate
+      - In the form of a long random password
+      - In the form of a encryption key
+  - question:
+      - A digital
+      - is an electronic
+      - that proves ownership of a
+      - key
+    answers:
+      - certificate
+      - document
+      - public
+  - question: Which of the following does a digital certificate contain?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Digital Signature
+      - Public Key
+      - Certificate Authority
+      - Private Key
+  - question: Let's encrypt is an example of what sort of certificate authority?
+    answers:
+      - 0
+    options:
+      - Intermediate
+      - Root
+  - question: Which sort of certificate authority validates the validity of an intermediate certificate authority?
+    answers:
+      - root
+  - question: Which of the following certificate authority does the browser keep a list of?
+    answers:
+      - 0
+    options:
+      - Root
+      - Intermediate
+  - question:
+      - Browser will form a
+      - connection, if the certificate matches the
+      - name of the
+      - you're are trying to connect to
+    answers:
+      - secure
+      - domain
+      - server
+  - question: Does the browser check if the certificate issued can be traced back to a trusted third party?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Suppose you connect to a server over a network, and the server sends you its public key. What do you now need to verify?
+    answers:
+      - 0
+    options:
+      - That the public key actually belongs to the server you're connecting to, and not to an attacker.
+      - That the public key has a valid, associated private key.
+      - That you have the associated private key in your OS's key store.
+      - That your web browser has already seen this public key.
+  - question: What is the role of a certificate authority in TLS?
+    answers:
+      - 0
+    options:
+      - To act as a trusted third party and verify the ownership of a public key.
+      - To create public-private key pairs.
+      - To decrypt network communications encrypted using a public key.
+      - To decide upon the specific encryption algorithms used for any given TLS connection.
+  - question: Which aspect of passport security most closely resembles the role of a certificate authority in TLS?
+    answers:
+      - 0
+    options:
+      - The government issuing the passport.
+      - The country that decides whether to allow a given passport holder to enter.
+      - The watermark confirming the validity of the passport.
+      - The passport picture page that helps confirm the owner's identity.
