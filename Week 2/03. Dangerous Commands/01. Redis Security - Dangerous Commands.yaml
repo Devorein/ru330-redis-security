@@ -1,0 +1,49 @@
+subject: Redis Security
+topic: Dangerous Commands
+questions:
+  - question: In general should the dangerous commands be avoided in production
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: Which of the following is an administrative command?
+    answers:
+      - 0
+    options:
+      - config
+      - set
+      - keys
+  - question: Which of the following commands are marked as dangerous?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Administrative
+      - Performance impacting commands
+      - Availability impacting commands
+      - Read/write commands
+  - question: Which of the following commands are considered dangerous
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - FLUSHALL
+      - FLUSHDB
+      - SHUTDOWN
+      - KEYS
+      - SET
+      - HMGET
+  - question: In what ways can dangerous Redis commands impact performance?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - They may block the Redis server for a long time while executing.
+      - They can delete all of the data in Redis.
+      - They can shut down the Redis server.
+      - They will timeout after a specified amount of time.
