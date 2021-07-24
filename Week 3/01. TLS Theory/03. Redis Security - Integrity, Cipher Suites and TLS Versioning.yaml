@@ -1,0 +1,115 @@
+subject: Redis Security
+topic: Integrity, Cipher Suites and TLS Versioning
+questions:
+  - question: Which of the following does TLS provide with the help of encryption?
+    answers:
+      - 0
+    options:
+      - Privacy
+      - Integrity
+      - Identity
+  - question: Which of the following does TLS provide with the help of encryption, digital certificates and certificate authorities?
+    answers:
+      - 0
+    options:
+      - Identity
+      - Integrity
+      - Privacy
+  - question: Which of the following relates to message integrity?
+    answers:
+      - 0
+      - 1
+    options:
+      - The message has not been tampered with
+      - The message was produced by a trusted sender
+      - The message has been received by a trusted party
+      - The connection between the sender and receiver is secure
+  - question: Which cipher does TLS first use to securely establish a shared encryption key
+    answers:
+      - 0
+    options:
+      - Asymmetric
+      - Symmetric
+  - question: What does MAC stand for?
+    answers:
+      - 0
+    options:
+      - Message Authentication Code
+      - Media Access Control
+      - Media Authentication Code
+      - Message Access Control
+  - question: Which cryptographic signature does both party attach to the symmetric encrypted data?
+    answers:
+      - mac
+  - question: Which of the following can be verified using a mac?
+    answers:
+      - 0
+      - 1
+    options:
+      - Data has not been tampered
+      - Data has been encrypted by someone who possesses the shared encryption key
+      - Data has been sent by a certificate authority
+  - question: How many cryptographic algorithms does TLS relies upon?
+    answers:
+      - 4
+  - question: Which of the following cryptographic algorithms does TLS relies upon?
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - Asymmetric key ciphers
+      - Symmetric key ciphers
+      - Digital signature
+      - Message Authentication Code
+  - question: When initializing on a TLS connection does the server and client need to decide which implementation of the algorithm they are going to use?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question:
+      - The
+      - of specific
+      - implementations used for a given
+      - connection is called a
+      - suite
+    answers:
+      - set
+      - cryptographic
+      - tls
+      - cipher
+  - question: Which of the following versions of TLS are legacy and generally not used?
+    answers:
+      - 0
+      - 1
+    options:
+      - 1.0
+      - 1.1
+      - 1.2
+      - 1.3
+  - question: Which of the following is the most modern version of TLS
+    answers:
+      - 0
+    options:
+      - 1.3
+      - 1.2
+      - 1.0
+      - 1.1
+  - question: Which of the following is the most widely used version of TLS
+    answers:
+      - 0
+    options:
+      - 1.2
+      - 1.3
+      - 1.0
+      - 1.1
+  - question: Why is it important for communication over a network to have integrity?
+    answers:
+      - 0
+    options:
+      - To ensure the messages being sent back and forth between entities have not been maliciously altered or monitored.
+      - To ensure communications are adhering to the organization's code of conduct and ethics.
+      - To keep a log of all messages sent and received for security audits.
+      - To allow only approved entities to send or receive communications within the network.
