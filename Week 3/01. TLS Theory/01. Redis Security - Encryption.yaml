@@ -1,0 +1,99 @@
+subject: Redis Security
+topic: Encryption
+questions:
+  - question: How many ciphers does TLS relies upon?
+    answers:
+      - 2
+  - question: In which cryptography is the same key used for both encryption and decryption?
+    answers:
+      - 0
+    options:
+      - Symmetric encryption
+      - Asymmetric encryption
+  - question: In which cryptography one key is used for encryption and the other for decryption?
+    answers:
+      - 0
+    options:
+      - Asymmetric encryption
+      - Symmetric encryption
+  - question: Which key is used to encrypt in Asymmetric encryption
+    answers:
+      - 0
+    options:
+      - public
+      - private
+  - question: Which key is used to decrypt in Asymmetric encryption
+    answers:
+      - 0
+    options:
+      - private
+      - public
+  - question: |
+      Write the command to generate a private encryption key
+      1. 2048 bits long
+      2. Output in `key.pem`
+
+    answers:
+      - openssl genrsa -out key.pem 2048
+  - question: Does the private encryption key contain the public key?
+    options:
+      - Yes
+      - No
+    answers:
+      - 0
+  - question: |
+      Write the command to generate a public key from
+
+      1. `key.pem` private key
+      2. output in `key.pub`
+    answers:
+      - openssl rsa -in key.pem -out key.pub -pubout
+  - question: |
+      Write the command to
+      1. Encrypt the file `a.txt`
+      2. Output to `a.enc`
+      3. Using the public encrypted key `a.pub`
+    answers:
+      - openssl rsautl -in a.txt -out a.enc -pubin -inkey a.pub -encrypt
+  - question: |
+      Write the command to
+      1. Decrypt the file `a.enc`
+      2. Using the private key `a.pem`
+    answers:
+      - openssl rsautl -in a.enc -inkey a.pem -decrypt
+  - question: Which of the following encryption is more computationally expensive?
+    answers:
+      - 0
+    options:
+      - Asymmetric
+      - Symmetric
+  - question: Which of the following encryption does TLS uses?
+    answers:
+      - 0
+      - 1
+    options:
+      - Asymmetric
+      - Symmetric
+      - None
+  - question: Which encryption should be used in order to encrypt a lot of data
+    answers:
+      - 0
+    options:
+      - Symmetric
+      - Asymmetric
+  - question:
+      - TLS uses
+      - key cryptography to establish a shared
+      - key for
+      - encryption
+    answers:
+      - asymmetric
+      - secret
+      - symmetric
+  - question: Which cipher does TLS use to establish a shared secret key?
+    answers:
+      - 0
+    options:
+      - An asymmetric-key cipher.
+      - A symmetric-key cipher.
+      - ROT13.
