@@ -1,0 +1,79 @@
+subject: Redis Security
+topic: TLS 1.3, Mutual Authentication and Advanced TLS Configuration
+questions:
+  - question: What does encrypting the data between redis and its replication nodes called?
+    answers:
+      - 0
+    options:
+      - Internode Encryption
+      - Intranode Encryption
+      - Internal Encryption
+      - External Encryption
+  - question: Which directive is used to configure tls on replication links?
+    answers:
+      - tls-replication
+  - question: Which directive is used to configure tls on redis clusters
+    answers:
+      - tls-cluster
+  - question:
+      - With
+      - authentication, clients must present a
+      - that has been signed by a certificate
+      - thats trusted by the redis
+      - .
+    answers:
+      - client
+      - certificate
+      - authority
+      - server
+  - question: Which of the following is required to create a client certificate?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Client private key
+      - Issuing certificate
+      - Private key of issuing certificate
+      - Public key of issuing certificate
+  - question: Which directive is used to configure client authentication using certificates
+    answers:
+      - tls-auth-clients
+  - question: Which of the following is used to authenticate a redis client?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Client private key
+      - Client certificate
+      - Issuing certificate
+      - Private key of the issuing certificate
+      - Private key of server
+  - question: Which of the following new features have been added to tls v1.3
+    answers:
+      - 0
+      - 1
+    options:
+      - Fewer round trips on the initial handshakes
+      - Enforces stronger cipher suites
+      - Keeps the connection alive longer
+  - question: Write the directive and value to only accept connection from clients using tls v1.3
+    answers:
+      - tls-protocols "TLSv1.3"
+  - question: What does internode encryption do?
+    answers:
+      - 0
+    options:
+      - Enforces TLS between Redis cluster nodes and between Redis master nodes and their replicas.
+      - Enforces encryption of in-memory Redis data.
+      - Enforces encryption of all Redis log files.
+      - Enforces TLS between Redis clients and servers.
+  - question: What does TLS client authentication do?
+    answers:
+      - 0
+    options:
+      - Requires all Redis clients to provide a certificate signed by a trusted certificate authority.
+      - Requests that all clients provide a valid username and password when connecting.
+      - Only permits IP addresses for client connection from a specific IP allow list.
+      - Requires clients to present the same public/private keypair that the server uses when connecting.
