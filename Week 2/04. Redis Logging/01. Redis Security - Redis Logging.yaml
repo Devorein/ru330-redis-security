@@ -1,0 +1,105 @@
+subject: Redis Security
+topic: Redis Logging
+questions:
+  - question: How many types of logs does redis have relevant to security?
+    answers:
+      - 2
+  - question: Which of the following redis log files are relevant to security?
+    answers:
+      - 0
+      - 1
+    options:
+      - ACL Log
+      - Redis server Log
+      - Redis client log
+      - Redis DB log
+  - question:
+      - The
+      - log allows you to see failed authentication and
+      - attempts when access to a
+      - or
+      - is blocked by an ACL
+    answers:
+      - acl
+      - access
+      - key
+      - command
+  - question: |
+      Which of the following commands will not cause an authentication error for a user created with this acl command
+      `acl setuser john on >password +get ~foo*`
+    answers:
+      text: 0
+      explanation: Since the user only has access to the `get` command and `foo` keys, it cannot `get bar` and use the `set` command
+    options:
+      - "`get foo`"
+      - "`get bar`"
+      - "`set foo bar`"
+  - question: Which command is used to get the contents of the acl log file
+    answers:
+      - acl log
+  - question: Which of the following could be the reasons due to which a command failed?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - auth
+      - command
+      - key
+      - value
+      - config
+  - question: Write the command to get the latest two entries from the acl log file
+    answers:
+      - acl log 2
+  - question: Is the acl log stored in a file?
+    options:
+      - Yes
+      - No
+    answers:
+      - 1
+  - question: Write the command to reset the acl log file
+    answers:
+      - acl log reset
+  - question: Which directive is used to set the maximum length of the acl log data
+    answers:
+      - acllog-max-len
+  - question: How many levels of logging does redis server log provides?
+    answers:
+      - 4
+  - question: Which of the following are redis server log levels
+    answers:
+      - 0
+      - 1
+      - 2
+      - 3
+    options:
+      - notice
+      - verbose
+      - warning
+      - debug
+      - error
+      - failure
+  - question:
+      - Redis supports sending the
+      - files to a
+      - logging server through the use of
+      - .
+    answers:
+      - log
+      - remote
+      - syslog
+  - question: Which redis configuration directive allows you to set the directory of the log file?
+    answers:
+      - logfile
+  - question: Which redis configuration directive is used to enable a remote logging server?
+    answers:
+      - syslog-indent
+  - question: Which security events can be viewed using the ACL LOG command?
+    answers:
+      - 0
+      - 1
+    options:
+      - Failed authentication attempts.
+      - Failed command/key access attempts.
+      - Successful command/key access.
+      - Successful authentications.
