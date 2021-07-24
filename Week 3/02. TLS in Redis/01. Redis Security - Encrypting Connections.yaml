@@ -1,0 +1,70 @@
+topic: Encrypting Connections
+subject: Redis Security
+questions:
+  - question: Which environment variable needs to be enabled to enable TLS in redis?
+    answers:
+      - BUILD_TLS
+  - question: Which of the following files are required to establish a tls connection in redis?
+    answers:
+      - 0
+      - 1
+      - 2
+    options:
+      - Server certificate
+      - Issuing CA certificate
+      - Server private key
+  - question: Which of the following is required to create the issuing certificate?
+    answers:
+      - 0
+    options:
+      - Private key
+      - Public key
+  - question: Which of the following is required to create the servers certificate?
+    answers:
+      - 0
+      - 1
+    options:
+      - Private key
+      - Issuing certificate
+      - Public key
+  - question: Write the command to notify ubuntu about new certificates?
+    answers:
+      - update-ca-certificates
+  - question: What is the default redis port?
+    answers:
+      - 6379
+  - question: Write the directive and its value to disable un-encrypted connection to redis
+    answers:
+      - port 0
+  - question: Which directive is used to point to the server certificate file?
+    answers:
+      - tls-cert-file
+  - question: Which directive is used to point to the server's private key file?
+    answers:
+      - tls-key-file
+  - question: Which directive is used to point to the issuing certificate authority file?
+    answers:
+      - tls-ca-cert-file
+  - question: Which directive is used to set the tls versions?
+    answers:
+      - tls-protocols
+  - question: Which directive is used to set the tls ciphers that can be used for tls <=1.2 connections
+    answers:
+      - tls-ciphers
+  - question: Which directive is used to set the tls ciphers that can be used for tls 1.3 connections
+    answers:
+      - tls-ciphersuites
+  - question: Which directive is used to decide whether the the server will choose the tls cipher
+    answers:
+      - tls-prefer-server-ciphers
+  - question: Which flag is used to connect to the server using tls?
+    answers:
+      - tls
+  - question: Suppose you want to require TLS for all Redis connections. Which configuration directives must you set for this to occur?
+    answers:
+      - 0
+    options:
+      - Set port to 0 and tls-port to 6379.
+      - Set port to 6378 and tls-port to 6379.
+      - Set bind to 127.0.0.1.
+      - Set protected-mode to yes.
